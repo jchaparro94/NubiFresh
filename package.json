@@ -1,0 +1,22 @@
+{
+  "name": "nubifresh",
+  "version": "1.0.0",
+  "description": "Meal Delivery Service",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchaparro94/NubiFresh.git"
+  },
+  "author": "Jose Chaparro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchaparro94/NubiFresh/issues"
+  },
+  "homepage": "https://github.com/jchaparro94/NubiFresh#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
