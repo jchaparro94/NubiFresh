@@ -80,7 +80,7 @@
           text-transform: uppercase;
           letter-spacing: 2px;
           padding: 1rem;
-          transition: scale .5s ease-in;
+          transition: all .2s ease-in;
 
 
           &:hover {
@@ -135,13 +135,122 @@
         font-family: 'Courgette', cursive;
       }
     }
+  }
+}
 
-    .btn-solid {
-      @include btn;
-      background-color: $red-solid;
+// About Section 
+.about {
+  font-size: 1.9rem;
+  padding-bottom: 2rem;
+  background: #e4e4e4;
+
+  .container {
+    .about-content {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-areas:
+        'bio'
+        'box1'
+        'box2';
+
+      .content-box-1 {
+        grid-area: 'bio';
+        background: #fff;
+        line-height: 1.4;
+        padding: 2rem;
+      }
+
+      .content-box-2,
+      .content-box-3 {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .content-text {
+          background: #fff;
+          padding: 2rem 4rem;
+          cursor: pointer;
+
+          .underline {
+            height: 2px;
+            background: #000;
+          }
+
+        }
+      }
+
+      .content-box-2 {
+        grid-area: 'box1';
+        background: linear-gradient(rgba(107, 142, 35, 0.7), rgba(107, 142, 35, 0.7)), url('../images/content-box-2.jpg') center center/cover no-repeat;
+      }
+    }
+
+    .content-box-3 {
+      grid-area: 'box2';
+      background: linear-gradient(rgba(221, 160, 221, 0.7), rgba(221, 160, 221, 0.7)), url('../images/content-box-3.jpg') center center/cover no-repeat;
+    }
+
+  }
+}
+
+// Locations Section
+.locations {
+  .grid {
+    .locations {
+      .location-image {
+        height: 100%;
+      }
+
+      .location-info {
+        text-align: center;
+
+        .city {
+          font-size: 2.5rem;
+          padding-bottom: .5rem;
+        }
+      }
+    }
+  }
+}
+
+// Footer 
+.main-footer {
+  background: $green-solid;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff;
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+    display: flex;
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+      border: 2px solid $red-solid;
+      border-radius: 50%;
+      display: flex;
+      margin-right: 1rem;
+      transition: background-color .5s;
+
+      i {
+        margin: auto;
+      }
 
       &:hover {
-        background-color: $red-light;
+        background-color: $red-solid;
+        color: #fff;
       }
     }
   }

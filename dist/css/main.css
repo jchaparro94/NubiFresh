@@ -22,11 +22,53 @@ ul {
 section {
   padding: 5rem 0; }
 
+img {
+  width: 100%; }
+
 .container {
   width: 100%;
   max-width: 120rem;
   padding: 0 1.5rem;
   margin: 0 auto; }
+
+.section-head {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .section-head .heading {
+    font-size: 3.5rem; }
+  .section-head .heading-underline {
+    height: 2px;
+    background: #9F0808;
+    width: 7rem;
+    text-align: center; }
+  .section-head .sub-heading {
+    font-size: 1.7rem;
+    font-family: 'Courgette', cursive;
+    font-weight: 300;
+    color: #a5a5a5;
+    padding: 1.2rem 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2.5rem; }
+
+.btn-solid {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 3.5rem;
+  border: none;
+  border-radius: 10rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #9F0808; }
+  .btn-solid:hover {
+    background-color: #b20909; }
 
 .header {
   width: 100%;
@@ -87,7 +129,7 @@ section {
         text-transform: uppercase;
         letter-spacing: 2px;
         padding: 1rem;
-        transition: scale .5s ease-in; }
+        transition: all .2s ease-in; }
         .header .nav .nav-list .nav-item .nav-link:hover {
           transform: scale(1.5); }
 
@@ -124,16 +166,77 @@ section {
       font-size: 3.6rem;
       text-transform: uppercase;
       font-family: 'Courgette', cursive; }
-  .hero .container .btn-solid {
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: .5rem 3.5rem;
-    border: none;
-    border-radius: 10rem;
-    display: inline-flex;
-    align-items: center;
-    background-color: #9F0808; }
-    .hero .container .btn-solid:hover {
-      background-color: #b20909; }
+
+.about {
+  font-size: 1.9rem;
+  padding-bottom: 2rem;
+  background: #e4e4e4; }
+  .about .container .about-content {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas: 'bio' 'box1' 'box2'; }
+    .about .container .about-content .content-box-1 {
+      grid-area: 'bio';
+      background: #fff;
+      line-height: 1.4;
+      padding: 2rem; }
+    .about .container .about-content .content-box-2,
+    .about .container .about-content .content-box-3 {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      .about .container .about-content .content-box-2 .content-text,
+      .about .container .about-content .content-box-3 .content-text {
+        background: #fff;
+        padding: 2rem 4rem;
+        cursor: pointer; }
+        .about .container .about-content .content-box-2 .content-text .underline,
+        .about .container .about-content .content-box-3 .content-text .underline {
+          height: 2px;
+          background: #000; }
+    .about .container .about-content .content-box-2 {
+      grid-area: 'box1';
+      background: linear-gradient(rgba(107, 142, 35, 0.7), rgba(107, 142, 35, 0.7)), url("../images/content-box-2.jpg") center center/cover no-repeat; }
+  .about .container .content-box-3 {
+    grid-area: 'box2';
+    background: linear-gradient(rgba(221, 160, 221, 0.7), rgba(221, 160, 221, 0.7)), url("../images/content-box-3.jpg") center center/cover no-repeat; }
+
+.locations .grid .locations .location-image {
+  height: 100%; }
+
+.locations .grid .locations .location-info {
+  text-align: center; }
+  .locations .grid .locations .location-info .city {
+    font-size: 2.5rem;
+    padding-bottom: .5rem; }
+
+.main-footer {
+  background: #0B5D02;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #fff; }
+  .main-footer h4 {
+    font-size: 2rem; }
+  .main-footer .social-icons {
+    margin-top: 1rem;
+    display: flex; }
+    .main-footer .social-icons .icon {
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+      border: 2px solid #9F0808;
+      border-radius: 50%;
+      display: flex;
+      margin-right: 1rem;
+      transition: background-color .5s; }
+      .main-footer .social-icons .icon i {
+        margin: auto; }
+      .main-footer .social-icons .icon:hover {
+        background-color: #9F0808;
+        color: #fff; }
