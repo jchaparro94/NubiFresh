@@ -1,0 +1,76 @@
+// Media Queries 
+@media screen and (min-width: 768px) {
+
+  // Header Section 
+  .header {
+    height: 10rem;
+
+    &.active {
+      height: 6rem;
+    }
+  }
+
+  // Hero Section {
+  .hero {
+    .container {
+      .main-heading {
+        .title {
+          font-size: 8rem;
+        }
+      }
+    }
+  }
+
+  // About Section 
+  .about {
+    .container {
+      .about-content {
+        grid-template-areas:
+          'bio box1'
+          'bio box2';
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  // Header Section 
+  .header {
+    .container {
+      .nav {
+        .hamburger-menu {
+          display: none;
+        }
+
+        .nav-list {
+          position: initial;
+          width: initial;
+          height: initial;
+          background-color: transparent;
+          flex-direction: row;
+          justify-content: initial;
+          opacity: 1;
+          transform: scale(1);
+
+          .nav-item {
+            &:not(:last-child) {
+              margin-right: 3rem;
+              margin-bottom: 0;
+            }
+
+            .nav-link {
+              font-size: 1.3rem;
+              font-weight: normal;
+              transition: color 0.5s;
+
+              &:hover {
+                color: #fa9e2c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

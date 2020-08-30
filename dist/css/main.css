@@ -107,6 +107,8 @@ img {
   bottom: 0;
   background: rgba(14, 118, 2, 0.7);
   z-index: 999; }
+  .header.active {
+    background-color: #0B5D02; }
   .header .nav {
     display: flex;
     align-items: center;
@@ -200,13 +202,14 @@ img {
   background: #e4e4e4; }
   .about .container .about-content {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-areas: 'bio' 'box1' 'box2'; }
     .about .container .about-content .content-box-1 {
-      grid-area: 'bio';
+      grid-area: bio;
       background: #fff;
       line-height: 1.4;
-      padding: 2rem; }
+      padding: 2rem;
+      max-width: 800px; }
     .about .container .about-content .content-box-2,
     .about .container .about-content .content-box-3 {
       height: 300px;
@@ -225,10 +228,10 @@ img {
           height: 2px;
           background: #000; }
     .about .container .about-content .content-box-2 {
-      grid-area: 'box1';
+      grid-area: box1;
       background: linear-gradient(rgba(107, 142, 35, 0.7), rgba(107, 142, 35, 0.7)), url("../images/content-box-2.jpg") center center/cover no-repeat; }
   .about .container .content-box-3 {
-    grid-area: 'box2';
+    grid-area: box2;
     background: linear-gradient(rgba(221, 160, 221, 0.7), rgba(221, 160, 221, 0.7)), url("../images/content-box-3.jpg") center center/cover no-repeat; }
 
 .locations .grid {
@@ -352,7 +355,6 @@ img {
       margin-bottom: 2.5rem; }
 
 .contact {
-  background: #e4e4e4;
   height: 80vh; }
   .contact .container {
     height: inherit;
@@ -380,3 +382,35 @@ img {
           transform: scaleX(0);
           transform-origin: left;
           transition: transform .5s; }
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 10rem; }
+    .header.active {
+      height: 6rem; }
+  .hero .container .main-heading .title {
+    font-size: 8rem; }
+  .about .container .about-content {
+    grid-template-areas: 'bio box1' 'bio box2'; } }
+
+@media screen and (min-width: 1000px) {
+  .header .container .nav .hamburger-menu {
+    display: none; }
+  .header .container .nav .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: initial;
+    opacity: 1;
+    transform: scale(1); }
+    .header .container .nav .nav-list .nav-item:not(:last-child) {
+      margin-right: 3rem;
+      margin-bottom: 0; }
+    .header .container .nav .nav-list .nav-item .nav-link {
+      font-size: 1.3rem;
+      font-weight: normal;
+      transition: color 0.5s; }
+      .header .container .nav .nav-list .nav-item .nav-link:hover {
+        color: #fa9e2c; } }

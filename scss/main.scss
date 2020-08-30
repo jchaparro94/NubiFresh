@@ -12,6 +12,10 @@
   background: $green-transparent;
   z-index: 999;
 
+  &.active {
+    background-color: $green-solid;
+  }
+
   .nav {
     display: flex;
     align-items: center;
@@ -147,17 +151,18 @@
   .container {
     .about-content {
       display: grid;
-      grid-gap: 2rem;
+      grid-gap: 1rem;
       grid-template-areas:
         'bio'
         'box1'
         'box2';
 
       .content-box-1 {
-        grid-area: 'bio';
+        grid-area: bio;
         background: #fff;
         line-height: 1.4;
         padding: 2rem;
+        max-width: 800px;
       }
 
       .content-box-2,
@@ -183,13 +188,13 @@
       }
 
       .content-box-2 {
-        grid-area: 'box1';
+        grid-area: box1;
         background: linear-gradient(rgba(107, 142, 35, 0.7), rgba(107, 142, 35, 0.7)), url('../images/content-box-2.jpg') center center/cover no-repeat;
       }
     }
 
     .content-box-3 {
-      grid-area: 'box2';
+      grid-area: box2;
       background: linear-gradient(rgba(221, 160, 221, 0.7), rgba(221, 160, 221, 0.7)), url('../images/content-box-3.jpg') center center/cover no-repeat;
     }
 
@@ -385,7 +390,7 @@
 
 // Contact Section 
 .contact {
-  background: #e4e4e4;
+  // background: #e4e4e4;
   height: 80vh;
 
 
@@ -427,3 +432,5 @@
     }
   }
 }
+
+@import 'media';
