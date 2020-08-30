@@ -297,3 +297,29 @@ img {
         transition: color .5s; }
         .menu-hero .container .grid .meal-info-wrap .btn-menu:hover {
           color: #fa9e2c; }
+
+.offer {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/special-offer-bg.jpg") bottom center no-repeat;
+  background-size: cover; }
+  .offer .container .offer-content {
+    background: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden; }
+    .offer .container .offer-content .discount {
+      background: #fa9e2c;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      outline: 2px solid #fa9e2c;
+      outline-offset: .5rem; }
+    .offer .container .offer-content .discount-name {
+      font-size: 2.6rem;
+      padding-bottom: 2rem; }
+    .offer .container .offer-content .paragraph {
+      color: #a5a5a5;
+      margin-bottom: 2.5rem; }
