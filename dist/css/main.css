@@ -204,14 +204,15 @@ img {
     grid-area: 'box2';
     background: linear-gradient(rgba(221, 160, 221, 0.7), rgba(221, 160, 221, 0.7)), url("../images/content-box-3.jpg") center center/cover no-repeat; }
 
-.locations .grid .locations .location-image {
-  height: 100%; }
-
-.locations .grid .locations .location-info {
-  text-align: center; }
-  .locations .grid .locations .location-info .city {
-    font-size: 2.5rem;
-    padding-bottom: .5rem; }
+.locations .grid {
+  padding: 1rem 0; }
+  .locations .grid .locations .location-image {
+    height: 100%; }
+  .locations .grid .locations .location-info {
+    text-align: center; }
+    .locations .grid .locations .location-info .city {
+      font-size: 2.5rem;
+      padding-bottom: .5rem; }
 
 .main-footer {
   background: #0B5D02;
@@ -240,3 +241,59 @@ img {
       .main-footer .social-icons .icon:hover {
         background-color: #9F0808;
         color: #fff; }
+
+.menu-hero {
+  height: 100%;
+  background: url("../images/hero-background.jpg") center no-repeat;
+  background-size: cover;
+  padding: 4rem 0; }
+  .menu-hero .container {
+    height: inherit; }
+    .menu-hero .container .section-head {
+      padding-top: 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      .menu-hero .container .section-head .heading,
+      .menu-hero .container .section-head .sub-heading {
+        color: #fff; }
+    .menu-hero .container .grid {
+      background: #fff;
+      padding: 2rem; }
+      .menu-hero .container .grid .image-wrap {
+        position: relative;
+        height: 25rem; }
+        .menu-hero .container .grid .image-wrap .meal-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+        .menu-hero .container .grid .image-wrap .meal-name {
+          font-size: 2.6rem;
+          background: #fa9e2c;
+          color: #fff;
+          padding: .5rem 2rem;
+          position: absolute;
+          left: 0;
+          bottom: 2.5rem;
+          z-index: 10; }
+      .menu-hero .container .grid .meal-info-wrap .meal-price {
+        display: block;
+        font-size: 3.6rem;
+        font-weight: bold;
+        color: #fa9e2c; }
+        .menu-hero .container .grid .meal-info-wrap .meal-price .per-meal {
+          color: #000;
+          font-size: 1.4rem;
+          font-weight: 100; }
+      .menu-hero .container .grid .meal-info-wrap .calories {
+        font-family: 'Courgette', cursive;
+        color: #a5a5a5; }
+      .menu-hero .container .grid .meal-info-wrap .paragraph {
+        padding: 1rem 0; }
+      .menu-hero .container .grid .meal-info-wrap .btn-menu {
+        padding: 0;
+        transition: color .5s; }
+        .menu-hero .container .grid .meal-info-wrap .btn-menu:hover {
+          color: #fa9e2c; }
