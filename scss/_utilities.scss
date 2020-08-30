@@ -84,6 +84,39 @@ $red-light: #b20909;
   grid-gap: 2.5rem;
 }
 
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input,
+.options {
+  outline: none;
+  border: none;
+  width: 100%;
+  min-height: 4rem;
+  padding: 1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Open Sans', sans-serif;
+  resize: none;
+
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.contact-form {
+  .input {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    font-weight: normal;
+    border-bottom: 2px solid #fff;
+    padding-left: 0;
+  }
+}
+
 // Mixins 
 @mixin btn {
   color: #fff;
